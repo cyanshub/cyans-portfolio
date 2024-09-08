@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "作品1: 揪團訂飲料專案",
-      "language": "Node.js/Express",
+      "language": "NodeJS(TS)/Express",
       "linkGitHub": "https://github.com/cyanshub/sp-ordering-drinks-061624",
       "linkWebAPIs": "https://scarlet-page-533.notion.site/1130612-Ordering-drinks-Web-APIs-beb80ee919da461a9ee6021fe2fc7bf4",
       "websiteRender": "https://sp-ordering-drinks-061624.onrender.com",
@@ -15,7 +15,7 @@
     {
       "id": 2,
       "title": "作品2: 太陽光電網站",
-      "language": "Node.js/Express",
+      "language": "NodeJS/Express",
       "linkGitHub": "https://github.com/cyanshub/sp-pvlist-051524",
       "linkWebAPIs": "https://scarlet-page-533.notion.site/1130612-Ordering-drinks-Web-APIs-beb80ee919da461a9ee6021fe2fc7bf4",
       "websiteRender": "https://sp-pvlist-051524.onrender.com",

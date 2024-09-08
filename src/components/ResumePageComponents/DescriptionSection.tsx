@@ -13,7 +13,7 @@ const DescriptionSection = () => {
       </div>
 
       <div className="title mb-2" style={{ whiteSpace: 'wrap' }}>
-        擅長技術：Node.js/Express、MySQL、React、JavaScript/TypeScript、HTML、CSS、Bootstrap、Git
+        擅長技術：NodeJS/Express、MySQL、React、JavaScript/TypeScript、HTML、CSS、Bootstrap、Git
       </div>
 
       <div className="title mb-2">最高學歷：國立臺灣大學土木系水利工程組碩士</div>
