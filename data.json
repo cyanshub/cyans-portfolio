@@ -8,7 +8,7 @@
       "linkWebAPIs": "",
       "websiteRender": "https://www.cyanstock.info",
       "cover": "images/sp1.jpg",
-      "userMe": "使用可收發郵件的 email",
+      "userMe": "使用 email 存取追蹤功能",
       "user1": "",
       "password": "從 email 取得動態驗證碼"
     },
@@ -20,9 +20,9 @@
       "linkWebAPIs": "",
       "websiteRender": "https://www.cyanstatic.site",
       "cover": "images/sp2.jpg",
-      "root": "",
+      "userMe": "使用 email 註冊帳號",
       "user1": "",
-      "password": ""
+      "password": "使用動態驗證碼"
     },
     {
       "id": 3,
