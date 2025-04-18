@@ -20,9 +20,8 @@
       "linkWebAPIs": "",
       "websiteRender": "https://www.cyanstatic.site",
       "cover": "images/sp2.jpg",
-      "userMe": "使用 email 註冊帳號",
-      "user1": "",
-      "password": "使用動態驗證碼"
+      "userMe": "user1@example.com",
+      "password": "000000"
     },
     {
       "id": 3,
