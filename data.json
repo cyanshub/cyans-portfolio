@@ -15,7 +15,7 @@
     {
       "id": 2,
       "title": "作品2: 線上商店模板",
-      "language": "NextJS",
+      "language": "Express & NextJS",
       "linkGitHub": "",
       "linkWebAPIs": "",
       "websiteRender": "https://www.cyanstatic.site",
@@ -25,7 +25,7 @@
     },
     {
       "id": 3,
-      "title": "作品3: 太陽光電網站",
+      "title": "作品3: 太陽光電圖鑑網",
       "language": "NodeJS/Express",
       "linkGitHub": "https://github.com/cyanshub/sp-pvlist-051524",
       "linkWebAPIs": "https://scarlet-page-533.notion.site/1130612-Ordering-drinks-Web-APIs-beb80ee919da461a9ee6021fe2fc7bf4",
@@ -37,8 +37,8 @@
     },
     {
       "id": 4,
-      "title": "作品4: 揪團訂飲料專案",
-      "language": "NodeJS(TS)/Express",
+      "title": "作品4: 揪團訂飲料",
+      "language": "NodeJS/Express",
       "linkGitHub": "https://github.com/cyanshub/sp-ordering-drinks-061624",
       "linkWebAPIs": "https://scarlet-page-533.notion.site/1130612-Ordering-drinks-Web-APIs-beb80ee919da461a9ee6021fe2fc7bf4",
       "websiteRender": "https://www.cyansordering.online",
