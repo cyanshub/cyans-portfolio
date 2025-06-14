@@ -2,7 +2,7 @@
   "sps": [
     {
       "id": 1,
-      "title": "(1) 股市指標追蹤網",
+      "title": "(1) 股市指標追蹤服務",
       "language": "Express & NextJS",
       "linkGitHub": "https://www.cyanstock.info/about-rsi",
       "linkWebAPIs": "",
@@ -14,13 +14,14 @@
     },
     {
       "id": 2,
-      "title": "(2) 商店金流結帳系統",
+      "title": "(2) Cyans Select 電商平台",
       "language": "Express & NextJS",
       "linkGitHub": "",
       "linkWebAPIs": "",
       "websiteRender": "https://www.cyanstatic.site",
       "cover": "images/sp2.jpg",
-      "userMe": "user1@example.com",
+      "root": "root@example.com",
+      "user1": "user1@example.com",
       "password": "000000"
     },
     {
