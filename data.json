@@ -40,19 +40,6 @@
       "password": "12345678"
     },
     {
-      "id": 4,
-      "title": "(4) 揪團訂飲料",
-      "projectType": "練習專案",
-      "language": "NodeJS/Express",
-      "linkGitHub": "https://github.com/cyanshub/sp-ordering-drinks-061624",
-      "linkWebAPIs": "https://scarlet-page-533.notion.site/1130612-Ordering-drinks-Web-APIs-beb80ee919da461a9ee6021fe2fc7bf4",
-      "websiteRender": "https://www.cyansordering.online",
-      "cover": "images/sp4.jpg",
-      "root": "root@example.com",
-      "user1": "user1@example.com",
-      "password": "12345678"
-    },
-    {
       "id": 5,
       "title": "其他: 毛小孩星球",
       "projectType": "練習 TypeScript",
