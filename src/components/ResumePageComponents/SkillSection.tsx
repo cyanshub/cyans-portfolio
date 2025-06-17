@@ -49,7 +49,7 @@ const SkillSection = ({ sps }: Props) => {
       {/* 作品集: 將陣列資料迴圈出來 */}
       {sps.map((sp) => {
         return (
-          <div key={sp.id} className="skill image-container">
+          <div key={sp.id} className="skill image-container" aria-label='點擊圖片可另開視窗前往網站' title="點擊圖片可另開視窗前往網站">
             <h3 className="skill-name">{sp.title}</h3>
 
             <div>
