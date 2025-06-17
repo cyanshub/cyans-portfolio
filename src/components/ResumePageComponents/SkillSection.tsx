@@ -14,6 +14,7 @@ type sp = {
   password?: string | undefined
   userMe?: string | undefined
   projectType?: string | undefined
+  note?: string | undefined
 }
 
 type Props = {
@@ -50,66 +51,68 @@ const SkillSection = ({ sps }: Props) => {
         return (
           <div key={sp.id} className="skill image-container">
             <h3 className="skill-name">{sp.title}</h3>
+
             <div>
-              {
-                sp.linkGitHub && (
-                  <a className="link-formats" href={sp.linkGitHub} target="_blank" rel="noopener noreferrer">
-                    <i className="fa-brands fa-github me-1"></i>
-                    <span>前往介紹頁面 | </span>
-                  </a>
-                )
-              }
-              {
-                // 依 sp.linkWebAPIs 的有無決定是否顯示
-                sp.projectType && (
-                  <span>專案性質: {sp.projectType }</span>
-                )
-              }
+              {sp.linkGitHub && (
+                <a className="link-formats" href={sp.linkGitHub} target="_blank" rel="noopener noreferrer">
+                  <i className="fa-brands fa-github me-1"></i>
+                  <span>前往介紹頁面 | </span>
+                </a>
+              )}
+              {sp.projectType && (
+                <span>專案性質: {sp.projectType}</span>
+              )}
             </div>
 
             <div className="mb-2">
               <a className="link-formats" href={sp.websiteRender} target="_blank" rel="noopener noreferrer">
-                <span>網站入口</span>
+                <span>前往網站</span>
               </a>
-
               <span> | 使用 {sp.language} 開發</span>
             </div>
+
             <a className="link-formats" href={sp.websiteRender} target="_blank" rel="noopener noreferrer">
               <img className="text-center img-shadow" src={sp.cover} alt={sp.title} />
             </a>
 
             {/* 測試帳號資訊 */}
-            <ul>
-              <div className="mt-2">
-                <strong>測試帳號</strong>
-              </div>
-              {
-                // 寫成箭頭函式的形式, 並用小括號立即執行
-                (() => {
-                  // 依密碼的有無決定是否顯示帳號資訊
-                  if (sp.root) {
-                    return (
-                      <>
-                        <StyledLi className="ms-3">帳號: {sp.root}</StyledLi>
-                        <StyledLi className="ms-3">帳號: {sp.user1}</StyledLi>
-                        <StyledLi className="ms-3 mb-3">密碼: {sp.password}</StyledLi>
-                      </>
-                    )
-                  } else if (sp.userMe) {
-                    return (
-                      <>
-                        <StyledLi className="ms-3">帳號: {sp.userMe}</StyledLi>
-                        <StyledLi className="ms-3 mb-3">密碼: {sp.password}</StyledLi>
-                      </>
-                    )
-                  } else {
-                    return <StyledLi className="ms-3">並未實作使用者驗證機制</StyledLi>
-                  }
-                })()
-              }
-            </ul>
+            <div className="mt-2">
+              <strong>測試帳號</strong>
+            </div>
+            <StyledUl>
+              {(() => {
+                if (sp.projectType === '工作專案') {
+                  return (
+                    <>
+                      <StyledLi className="ms-3">工作專案，無提供測試帳號</StyledLi>
+                      <StyledLi className="ms-3">僅展示可公開之頁面內容</StyledLi>
+                      <StyledLi className="ms-3">備註: {sp.note}</StyledLi>
+                    </>
+                  )
+                }
+
+                if (sp.root) {
+                  return (
+                    <>
+                      <StyledLi className="ms-3">帳號: {sp.root}</StyledLi>
+                      <StyledLi className="ms-3">帳號: {sp.user1}</StyledLi>
+                      <StyledLi className="ms-3 mb-3">密碼: {sp.password}</StyledLi>
+                    </>
+                  )
+                } else if (sp.userMe) {
+                  return (
+                    <>
+                      <StyledLi className="ms-3">帳號: {sp.userMe}</StyledLi>
+                      <StyledLi className="ms-3 mb-3">密碼: {sp.password}</StyledLi>
+                    </>
+                  )
+                } else {
+                  return <StyledLi className="ms-3">並未實作使用者驗證機制</StyledLi>
+                }
+              })()}
+            </StyledUl>
           </div>
-        )
+        );
       })}
     </div>
   )
@@ -128,6 +131,10 @@ const StyledA = styled.a`
     color: var(--nav-link-color);
   }
 `
-
+const StyledUl = styled.ul`
+  padding-left: 0;
+  margin-left: 0;
+  list-style-position: inside; /* 可選，讓 bullet 在左側對齊文字 */
+`
 
 export default SkillSection

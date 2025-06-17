@@ -1,6 +1,20 @@
 {
   "sps": [
     {
+      "id": 1,
+      "title": "(1) 青年參與農村整合平台",
+      "projectType": "工作專案",
+      "language": "Django & NextJS",
+      "linkGitHub": "https://drive.google.com/file/d/1rdtDPZ2md7ad1RejkY8xbMXrMC9G5D9I/view?pli=1",
+      "linkWebAPIs": "",
+      "websiteRender": "https://ruralup.ardswc.gov.tw",
+      "cover": "images/rural.jpg",
+      "userMe": "使用 email 存取追蹤功能",
+      "user1": "",
+      "password": "從 email 取得動態驗證碼",
+      "note": "由本人負責全端開發及維運"
+    },
+    {
       "id": 2,
       "title": "(2) 股市指標追蹤服務",
       "projectType": "個人專案",
@@ -41,7 +55,7 @@
     },
     {
       "id": 5,
-      "title": "其他: 毛小孩星球",
+      "title": "(5) 毛小孩星球",
       "projectType": "練習 TypeScript",
       "language": "React + TypeScript",
       "linkGitHub": "https://github.com/cyanshub/sp-adopt-react-071924",
