@@ -13,6 +13,7 @@ type sp = {
   user1?: string | undefined
   password?: string | undefined
   userMe?: string | undefined
+  projectType?: string | undefined
 }
 
 type Props = {
@@ -50,17 +51,18 @@ const SkillSection = ({ sps }: Props) => {
           <div key={sp.id} className="skill image-container">
             <h3 className="skill-name">{sp.title}</h3>
             <div>
-              <a className="link-formats" href={sp.linkGitHub} target="_blank" rel="noopenner noreferrer">
-                <i className="fa-brands fa-github me-1"></i>
-                <span>GitHub 頁面</span>
-              </a>
-
+              {
+                sp.linkGitHub && (
+                  <a className="link-formats" href={sp.linkGitHub} target="_blank" rel="noopenner noreferrer">
+                    <i className="fa-brands fa-github me-1"></i>
+                    <span>前往介紹頁面 | </span>
+                  </a>
+                )
+              }
               {
                 // 依 sp.linkWebAPIs 的有無決定是否顯示
-                sp.linkWebAPIs && (
-                  <a className="link-formats" href={sp.linkWebAPIs} target="_blank" rel="noopenner noreferrer">
-                    <span> | Web APIs 文件</span>
-                  </a>
+                sp.projectType && (
+                  <span>專案性質: {sp.projectType }</span>
                 )
               }
             </div>
