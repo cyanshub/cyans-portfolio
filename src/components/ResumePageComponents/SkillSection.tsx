@@ -38,7 +38,7 @@ const SkillSection = ({ sps }: Props) => {
         <h3 className="skill-name">作品列表</h3>
         <ul>
           {sps.map((sp) => (
-            <StyledA key={sp.id} href={sp.websiteRender} target="_blank" rel="noopenner noreferrer">
+            <StyledA key={sp.id} href={sp.websiteRender} target="_blank" rel="noopener noreferrer">
               <li>{sp.title}</li>
             </StyledA>
           ))}
@@ -53,7 +53,7 @@ const SkillSection = ({ sps }: Props) => {
             <div>
               {
                 sp.linkGitHub && (
-                  <a className="link-formats" href={sp.linkGitHub} target="_blank" rel="noopenner noreferrer">
+                  <a className="link-formats" href={sp.linkGitHub} target="_blank" rel="noopener noreferrer">
                     <i className="fa-brands fa-github me-1"></i>
                     <span>前往介紹頁面 | </span>
                   </a>
@@ -68,13 +68,13 @@ const SkillSection = ({ sps }: Props) => {
             </div>
 
             <div className="mb-2">
-              <a className="link-formats" href={sp.websiteRender} target="_blank" rel="noopenner noreferrer">
+              <a className="link-formats" href={sp.websiteRender} target="_blank" rel="noopener noreferrer">
                 <span>網站入口</span>
               </a>
 
               <span> | 使用 {sp.language} 開發</span>
             </div>
-            <a className="link-formats" href={sp.websiteRender} target="_blank" rel="noopenner noreferrer">
+            <a className="link-formats" href={sp.websiteRender} target="_blank" rel="noopener noreferrer">
               <img className="text-center img-shadow" src={sp.cover} alt={sp.title} />
             </a>
 
