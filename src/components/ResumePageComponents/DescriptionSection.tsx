@@ -13,16 +13,16 @@ const DescriptionSection = () => {
       </div>
 
       <div className="title mb-2" style={{ whiteSpace: 'wrap' }}>
-        擅長技術：NodeJS/Express、Django、ReactJS/Next、MySQL、PgAdmin、AWS EC2、Docker、Nginx、JavaScript/TypeScript
+        擅長技術：NodeJS/Express、Django/Python、React/NextJS、MySQL、PgAdmin、AWS EC2、Docker、Nginx、JavaScript/TypeScript
       </div>
 
       <div className="title mb-2">
-        工作經歷 1：全端工程師 | 新創軟體開發團隊
+        工作經歷 1：全端工程師 | Eslitec 以力科技
       </div>
       <div className="title mb-2">
         工作經歷 2：研發工程師 | 工研院綠能所
       </div>
-      <div className="title mb-2">學歷：國立臺灣大學土木系水利工程組碩士</div>
+      <div className="title mb-2">最高學歷：國立臺灣大學土木工程研究所</div>
     </div>
   )
 }

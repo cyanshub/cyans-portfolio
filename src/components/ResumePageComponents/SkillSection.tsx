@@ -33,7 +33,7 @@ const SkillSection = ({ sps }: Props) => {
         </p>
 
         <p className="skill-description">
-          我已將幾個過去比較主要的作品重新部署至 AWS EC2，並採用 Docker 進行容器化管理。這些專案透過 Nginx 進行反向代理，並自行申請 DNS 網域與 SSL 憑證，支援 HTTPS 安全連線，讓我對伺服器環境的運行與管理有更深入的掌握。GitHub README 已整理專案重點，歡迎實際體驗看看！
+          我已將幾個過去比較主要的作品重新部署至 AWS EC2，並採用 Docker 進行容器化管理。這些專案透過 Nginx 進行反向代理，並自行申請 DNS 網域與 SSL 憑證，支援 HTTPS 安全連線，讓我對伺服器環境的運行與管理有更深入的掌握。歡迎參考介紹頁面並實際體驗看看！
         </p>
 
         <h3 className="skill-name">作品列表</h3>
@@ -49,7 +49,7 @@ const SkillSection = ({ sps }: Props) => {
       {/* 作品集: 將陣列資料迴圈出來 */}
       {sps.map((sp) => {
         return (
-          <div key={sp.id} className="skill image-container" aria-label='點擊圖片可另開視窗前往網站' title="點擊圖片可另開視窗前往網站">
+          <div key={sp.id} className="skill image-container mx-3" aria-label='點擊圖片可另開視窗前往網站' title="點擊圖片可另開視窗前往網站">
             <h3 className="skill-name">{sp.title}</h3>
 
             <div>
@@ -68,7 +68,7 @@ const SkillSection = ({ sps }: Props) => {
               <a className="link-formats" href={sp.websiteRender} target="_blank" rel="noopener noreferrer">
                 <span>前往網站</span>
               </a>
-              <span> | 使用 {sp.language} 開發</span>
+              <span> | {sp.language}</span>
             </div>
 
             <a className="link-formats" href={sp.websiteRender} target="_blank" rel="noopener noreferrer">

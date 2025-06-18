@@ -7,7 +7,7 @@ const InfoSection = () => {
         </a>
       </div>
 
-      <p className="description mt-3">我是 Cyan，專注於全端開發與雲端部署的軟體工程師，擁有後端 API 設計、前端開發、系統部署的完整經驗，並成功開發與部署多個網頁專案。</p>
+      <p className="description mt-3">我是黃晉揚，畢業於台大土木所。曾任工研院研發工程師，目前在以力科技擔任全端工程師，持續投入網站開發與雲端部署。</p>
     </div>
   )
 }
