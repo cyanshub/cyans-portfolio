@@ -13,7 +13,7 @@ const Header = ({ onChange }: Props) => {
     <header>
       <nav>
         <a className="link-formats" href="#">
-          <span className="nav-title">Chin-Yang, Huang</span>
+          <span className="nav-title">Cyan's Works</span>
         </a>
         <div className="nav-group">
           <label htmlFor="nav-darkmode-toggle" className="nav-icon">
