@@ -42,21 +42,21 @@
     },
     {
       "id": 4,
-      "title": "(4) 太陽光電圖鑑網",
-      "projectType": "練習專案",
-      "language": "Express 全端開發",
-      "linkGitHub": "https://github.com/cyanshub/sp-pvlist-051524",
-      "linkWebAPIs": "https://scarlet-page-533.notion.site/1130612-Ordering-drinks-Web-APIs-beb80ee919da461a9ee6021fe2fc7bf4",
-      "websiteRender": "https://www.cyanspvlist.online",
-      "cover": "images/pvlist.jpg",
-      "root": "root@example.com",
-      "user1": "user1@example.com",
-      "password": "12345678"
+      "title": "(4) Vue 待辦事項",
+      "projectType": "Vue 練習",
+      "language": "Vue + JavaScript",
+      "linkGitHub": "https://github.com/cyanshub/starter-vue-todolist",
+      "linkWebAPIs": "",
+      "websiteRender": "https://www.cyanstatic.site/todos",
+      "cover": "images/todolist.jpg",
+      "root": "",
+      "user1": "",
+      "password": ""
     },
     {
       "id": 5,
-      "title": "(5) 毛小孩星球",
-      "projectType": "TypeScript 練習",
+      "title": "(5) React 毛小孩",
+      "projectType": "React 練習",
       "language": "React + TypeScript",
       "linkGitHub": "https://github.com/cyanshub/sp-adopt-react-071924",
       "linkWebAPIs": "",
@@ -65,6 +65,19 @@
       "root": "",
       "user1": "",
       "password": ""
+    },
+    {
+      "id": 6,
+      "title": "(6) 太陽光電圖鑑網",
+      "projectType": "練習專案",
+      "language": "Express & Handlebars 全端開發",
+      "linkGitHub": "https://github.com/cyanshub/sp-pvlist-051524",
+      "linkWebAPIs": "https://scarlet-page-533.notion.site/1130612-Ordering-drinks-Web-APIs-beb80ee919da461a9ee6021fe2fc7bf4",
+      "websiteRender": "https://www.cyanspvlist.online",
+      "cover": "images/pvlist.jpg",
+      "root": "root@example.com",
+      "user1": "user1@example.com",
+      "password": "12345678"
     }
   ]
 }

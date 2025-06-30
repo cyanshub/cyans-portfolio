@@ -13,7 +13,7 @@ const DescriptionSection = () => {
       </div>
 
       <div className="title mb-2" style={{ whiteSpace: 'wrap' }}>
-        擅長技術：NodeJS/Express、Django/Python、React/NextJS、MySQL、PgAdmin、AWS EC2、Docker、Nginx、JavaScript/TypeScript
+        擅長技術：NodeJS/Express、Django/Python、React/NextJS、Vue、MySQL、PgAdmin、AWS EC2、Docker、Nginx、JavaScript/TypeScript
       </div>
 
       <div className="title mb-2">
