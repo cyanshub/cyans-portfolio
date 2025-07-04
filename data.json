@@ -42,7 +42,7 @@
     },
     {
       "id": 4,
-      "title": "(4) Vue 待辦事項",
+      "title": "(4) Vue 任務管理工具",
       "projectType": "Vue 練習",
       "language": "Vue + JavaScript",
       "linkGitHub": "https://github.com/cyanshub/starter-vue-todolist",
