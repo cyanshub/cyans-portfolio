@@ -14,7 +14,7 @@
 }
 
 .skill-description {
-  min-width: 240px;
+  min-width: 300px; /* 從240px增加到300px */
   margin-bottom: 20px;
   text-indent: 2em;
 }
@@ -29,14 +29,41 @@
 }
 
 .skill-section {
-  max-width: 1500px;
+  max-width: 2200px; /* 增加最大寬度以容納6張作品 */
 
   .image-container {
     flex: 0 0 auto;
+    /* 移除固定圖片尺寸，讓樣式化組件控制 */
+  }
+}
 
-    img {
-      width: 270px;
-      height: 410px;
-    }
+/* 手機版作品描述寬度調整 */
+@media screen and (max-width: 575px) {
+  .skill-description {
+    min-width: 280px; /* 從320px減少到280px */
+    width: auto; /* 讓寬度自動調整 */
+    max-width: 100%; /* 確保不會超出螢幕 */
+  }
+  
+  .skill-section {
+    overflow-x: auto; /* 保持橫向卷軸避免跑版 */
+  }
+}
+
+/* 平板版作品描述寬度調整 */
+@media screen and (min-width: 576px) and (max-width: 1199px) {
+  .skill-description {
+    min-width: 350px; /* 平板版更寬一點 */
+  }
+}
+
+/* 大螢幕時調整作品間距 */
+@media screen and (min-width: 1200px) {
+  .skill {
+    margin-right: 30px; /* 減少邊距以容納更多作品 */
+  }
+
+  .skill-description {
+    min-width: 400px; /* 大螢幕最寬 */
   }
 }

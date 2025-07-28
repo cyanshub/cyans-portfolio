@@ -60,7 +60,14 @@ const SkillSection = ({ sps }: Props) => {
                 </a>
               )}
               {sp.projectType && (
-                <span>專案性質: {sp.projectType}</span>
+                <span>
+                  專案性質: 
+                  {(sp.projectType === '個人專案' || sp.projectType === '工作專案') ? (
+                    <strong>{sp.projectType}</strong>
+                  ) : (
+                    sp.projectType
+                  )}
+                </span>
               )}
             </div>
 
@@ -72,45 +79,47 @@ const SkillSection = ({ sps }: Props) => {
             </div>
 
             <a className="link-formats" href={sp.websiteRender} target="_blank" rel="noopener noreferrer">
-              <img className="text-center img-shadow" src={sp.cover} alt={sp.title} />
+              <StyledImageContainer>
+                <StyledImage src={sp.cover} alt={sp.title} />
+              </StyledImageContainer>
             </a>
 
             {/* 測試帳號資訊 */}
-            <div className="mt-2">
-              <strong>測試帳號</strong>
-            </div>
-            <StyledUl>
-              {(() => {
-                if (sp.projectType === '工作專案') {
-                  return (
-                    <>
-                      <StyledLi className="ms-3">工作專案，無提供測試帳號</StyledLi>
-                      <StyledLi className="ms-3">僅展示可公開之頁面內容</StyledLi>
-                      <StyledLi className="ms-3">備註: {sp.note}</StyledLi>
-                    </>
-                  )
-                }
+            <StyledAccountContainer>
+              <StyledAccountTitle>測試帳號</StyledAccountTitle>
+              <StyledAccountList>
+                {(() => {
+                  if (sp.projectType === '工作專案') {
+                    return (
+                      <>
+                        <StyledAccountItem>工作專案，無提供測試帳號</StyledAccountItem>
+                        <StyledAccountItem>僅展示可公開之頁面內容</StyledAccountItem>
+                        <StyledAccountItem>備註: {sp.note}</StyledAccountItem>
+                      </>
+                    )
+                  }
 
-                if (sp.root) {
-                  return (
-                    <>
-                      <StyledLi className="ms-3">帳號: {sp.root}</StyledLi>
-                      <StyledLi className="ms-3">帳號: {sp.user1}</StyledLi>
-                      <StyledLi className="ms-3 mb-3">密碼: {sp.password}</StyledLi>
-                    </>
-                  )
-                } else if (sp.userMe) {
-                  return (
-                    <>
-                      <StyledLi className="ms-3">帳號: {sp.userMe}</StyledLi>
-                      <StyledLi className="ms-3 mb-3">密碼: {sp.password}</StyledLi>
-                    </>
-                  )
-                } else {
-                  return <StyledLi className="ms-3">並未實作使用者驗證機制</StyledLi>
-                }
-              })()}
-            </StyledUl>
+                  if (sp.root) {
+                    return (
+                      <>
+                        <StyledAccountItem>帳號: {sp.root}</StyledAccountItem>
+                        <StyledAccountItem>帳號: {sp.user1}</StyledAccountItem>
+                        <StyledAccountItem>密碼: {sp.password}</StyledAccountItem>
+                      </>
+                    )
+                  } else if (sp.userMe) {
+                    return (
+                      <>
+                        <StyledAccountItem>帳號: {sp.userMe}</StyledAccountItem>
+                        <StyledAccountItem>密碼: {sp.password}</StyledAccountItem>
+                      </>
+                    )
+                  } else {
+                    return <StyledAccountItem>並未實作使用者驗證機制</StyledAccountItem>
+                  }
+                })()}
+              </StyledAccountList>
+            </StyledAccountContainer>
           </div>
         );
       })}
@@ -119,10 +128,6 @@ const SkillSection = ({ sps }: Props) => {
 }
 
 // UI 元件樣式
-const StyledLi = styled.li`
-  white-space: nowrap;
-`
-
 const StyledA = styled.a`
   text-decoration: none;
   color: var(--main-text-color);
@@ -131,10 +136,76 @@ const StyledA = styled.a`
     color: var(--nav-link-color);
   }
 `
-const StyledUl = styled.ul`
+
+// 新增圖片容器樣式
+const StyledImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+`
+
+const StyledImage = styled.img`
+  max-width: 100%;
+  max-height: 80vh; /* 使用視窗高度的80%作為最大高度 */
+  width: auto;
+  height: auto;
+  object-fit: contain; /* 確保圖片完整顯示 */
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+
+  /* 桌面版樣式 */
+  @media screen and (min-width: 768px) {
+    max-width: 280px;
+    max-height: 70vh;
+  }
+
+  /* 大螢幕樣式 */
+  @media screen and (min-width: 1200px) {
+    max-width: 320px;
+    max-height: 65vh;
+  }
+
+  /* 超大螢幕樣式 */
+  @media screen and (min-width: 1600px) {
+    max-width: 350px;
+    max-height: 60vh;
+  }
+
+  &:hover {
+    transform: scale(1.02);
+  }
+`
+
+const StyledAccountContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+  border-top: 1px solid var(--decoration-line-color);
+`
+
+const StyledAccountTitle = styled.h4`
+  font-size: 1rem;
+  color: var(--main-text-color);
+  margin-bottom: 0.5rem;
+`
+
+const StyledAccountList = styled.ul`
   padding-left: 0;
   margin-left: 0;
-  list-style-position: inside; /* 可選，讓 bullet 在左側對齊文字 */
+  list-style-position: inside;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`
+
+const StyledAccountItem = styled.li`
+  font-size: 0.9rem;
+  color: var(--main-text-color);
+  margin-bottom: 0.25rem;
 `
 
 export default SkillSection

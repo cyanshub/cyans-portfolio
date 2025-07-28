@@ -31,7 +31,9 @@
   font-size: 0.9rem;
   letter-spacing: 2px;
   color: var(--title-color);
-  white-space: nowrap;
+  white-space: normal; /* 改為 normal，允許文字換行 */
+  word-wrap: break-word; /* 允許長單字換行 */
+  max-width: 100%; /* 確保不會超出容器 */
 }
 
 .description {

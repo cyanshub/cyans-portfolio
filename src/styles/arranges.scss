@@ -12,6 +12,12 @@ main {
   margin-bottom: 1px;
 }
 
+/* 手機版和小螢幕的 description-section 設定 */
+.description-section {
+  min-width: 380px; /* 從400px減少到380px */
+  margin: 0 auto;
+}
+
 /* 導入媒體查詢(寬576px以上) */
 @media screen and (min-width: 576px) {
   .skill-section {
@@ -26,6 +32,10 @@ main {
 
   .skill-description {
     margin-bottom: 5px;
+  }
+
+  .description-section {
+    min-width: 480px; /* 從520px減少到480px */
   }
 }
 
@@ -51,7 +61,7 @@ main {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    max-width: 1500px;
+    max-width: 2200px; /* 增加最大寬度以容納6張作品 */
     margin: 0 auto;
     margin-top: 60px;
   }
@@ -62,7 +72,8 @@ main {
   }
 
   .description-section {
-    flex-basis: 40%;
+    flex-basis: 35%; /* 從38%減少到35% */
+    min-width: 380px; /* 從420px減少到380px */
   }
 
   .skill-experience-section {
